@@ -1,3 +1,23 @@
+Initial Steps for setup
+sudo apt install node.js
+
+sudo apt install npm
+
+the npm modules that the project depends on are in the node_modules directory
+the main functions of the package.json are to describe your project and to list its dependencies and store project metadata
+
+run 'npm install express' in project directory /hrpm
+
+unit test - Jest
+run 'npm install --save-dev jest' in project directory /hrpm
+
+Jest provides code test coverage
+run 'npm test -- --coverage' in project directory /hrpm
+
+ESLint
+run 'npm install --save-dev eslint'
+run './node_modules/.bin/eslint --init'
+
 hrpm.js - is the application node.js file, launch in terminal:$ node hrpm.js
 
 use Chrome to debug:
@@ -24,18 +44,8 @@ config.js
 .credentials.development.json - file needs created based on environment (Prod, Dev), in .gitingnore
 used for database credentials
 
-the npm modules that the project depends on are in the node_modules directory
-the main functions of the package.json are to describe your project and to list its dependencies and store project metadata
 
-Initial Steps for setup
-run 'npm install express' in project directory /hrpm
 
-unit test - Jest
-run 'npm install --save-dev jest' in project directory /hrpm
 
-Jest provides code test coverage
-run 'npm test -- --coverage' in project directory /hrpm
 
-ESLint
-run 'npm install --save-dev eslint'
-run './node_modules/.bin/eslint --init'
+
