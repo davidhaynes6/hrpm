@@ -4,12 +4,16 @@
   "description": "",
   "main": "hrpm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint hrpmc.js lib"
   },
   "author": "Haynes Software LLC",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
