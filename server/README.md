@@ -18,6 +18,32 @@ ESLint
 run 'npm install --save-dev eslint'
 run './node_modules/.bin/eslint --init'
 
+API - Cor 
+run 'npm install cors'
+
+Fetch
+run 'npm install --save-dev node-fetch@2.6.0
+
+Morgan - Logging
+run 'npm install morgan'
+
+MongoDb 
+run 'npm install mongo"
+
+PostgreSQL support
+run 'npm install pg'
+
+To intialize the PostgreSQL database
+run 
+
+Used to translate snake_case to camelCase
+run 'node install lodash'
+
+running server in Production
+export NODE_ENV=production, development is default
+hrpm.js - is the application node.js file, launch in terminal:$ node hrpm.js
+
+
 hrpm.js - is the application node.js file, launch in terminal:$ node hrpm.js
 
 use Chrome to debug:

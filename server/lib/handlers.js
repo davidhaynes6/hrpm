@@ -1,14 +1,23 @@
 const fortune = require('./fortune')
+const db = require('../db')
 
-exports.home = (req, res) => res.render('home')
+exports.getVacationsApi = async (req, res) => {
+  const vacations = await db.getVacations({ available: true })
+  res.json(vacations)
+}
 
-exports.about = (req, res) =>
-  res.render('about', { fortune: fortune.getFortune() })
+exports.getVacationBySkuApi = async (req, res) => {
+  const vacation = await db.getVacationBySku(req.params.sku)
+  res.json(vacation)
+}
 
-exports.notFound = (req, res) => res.render('404')
+exports.addVacationInSeasonListenerApi = async (req, res) => {
+  console.log(`${req.body.email} is listening for vacation ${req.params.sku}`)
+  await db.addVacationInSeasonListener(req.params.sku, req.body.email)
+  res.json({ message: 'success' })
+}
 
-// Express recognizes the error handler by way of its four
-// arguments, so we have to disable ESLint's no-unused-vars rule
-/* eslint-disable no-unused-vars */
-exports.serverError = (err, req, res, next) => res.render('500')
-/* eslint-enable no-unused-vars */
+exports.requestDeleteVacationApi = async (req, res) => {
+  const { email, notes } = req.body
+  res.status(500).json({ message: 'not yet implemented' })
+}
